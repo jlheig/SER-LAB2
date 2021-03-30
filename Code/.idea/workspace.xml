@@ -7,8 +7,6 @@
     <list default="true" id="63dc051d-3058-46cc-9b26-2484627b0d8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/ser/labo2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/ser/labo2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/heigvd/ser/labo2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/heigvd/ser/labo2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/heigvd/ser/labo2/coups/Deplacement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/heigvd/ser/labo2/coups/Deplacement.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,17 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -122,6 +109,8 @@
       <option name="presentableId" value="Default" />
       <updated>1585919598984</updated>
       <workItem from="1617110115773" duration="6664000" />
+      <workItem from="1617117228781" duration="1800000" />
+      <workItem from="1617119056703" duration="37000" />
     </task>
     <servers />
   </component>
@@ -161,17 +150,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ch/heigvd/ser/labo2/Main.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tournois_fse.dtd">
