@@ -65,59 +65,54 @@ class Main
             String resultFilename = tournoi.getAttributeValue("nom") + "_" + (gameNumber++) + ".PGN";
 
             // Création du fichier de sortie.
-            PrintWriter out = null;
-            try
+            try (PrintWriter out = new PrintWriter(new FileWriter(resultFilename)))
             {
-               out = new PrintWriter(new FileWriter(resultFilename));
+               int turn = 1;
+               boolean blackTurn = false;
+
+               // Pour chaque coup
+               for (Element coup : partie.getChild("coups").getChildren())
+               {
+                  // Création du coup spécial
+                  CoupSpecial cs = getCoupSpecialFromString(coup.getAttributeValue("coup_special"));
+
+                  // Est-ce un déplacement ou un roque ?
+                  Element typeCoup = coup.getChild("deplacement");
+                  Coup objCoup = null;
+                  if (typeCoup != null) // Le coup est un déplacement
+                  {
+                     objCoup = getDeplacementFromElement(typeCoup, cs);
+                  }
+                  else // C'est donc un roque
+                  {
+                     typeCoup = coup.getChild("roque");
+                     objCoup = getRoqueFromElement(typeCoup, cs);
+                  }
+
+
+                  String notationPGN = objCoup != null ? objCoup.notationPGN() : "";
+
+
+                  if (blackTurn) // Coup des noirs
+                  {
+                     out.println(" " + notationPGN);
+
+                     blackTurn = false;
+                     ++turn;
+                  }
+                  else // Coup des blancs
+                  {
+                     out.print(turn + " " + notationPGN);
+
+                     blackTurn = true;
+                  }
+               }
             }
             catch (IOException e)
             {
                System.out.println(e.getMessage());
                return;
             }
-
-            int turn = 1;
-            boolean blackTurn = false;
-
-            // Pour chaque coup
-            for (Element coup : partie.getChild("coups").getChildren())
-            {
-               // Création du coup spécial
-               CoupSpecial cs = getCoupSpecialFromString(coup.getAttributeValue("coup_special"));
-
-               // Est-ce un déplacement ou un roque ?
-               Element typeCoup = coup.getChild("deplacement");
-               Coup objCoup = null;
-               if (typeCoup != null) // Le coup est un déplacement
-               {
-                  objCoup = getDeplacementFromElement(typeCoup, cs);
-               }
-               else // C'est donc un roque
-               {
-                  typeCoup = coup.getChild("roque");
-                  objCoup = getRoqueFromElement(typeCoup, cs);
-               }
-
-
-               String notationPGN = objCoup != null ? objCoup.notationPGN() : "";
-
-
-               if (blackTurn) // Coup noir
-               {
-                  out.println(" " + notationPGN);
-
-                  blackTurn = false;
-                  ++turn;
-               }
-               else // Coup blanc
-               {
-                  out.print(turn + " " + notationPGN);
-
-                  blackTurn = true;
-               }
-            }
-
-            out.close();
          }
       }
    }
@@ -213,8 +208,15 @@ class Main
     */
    private static Roque getRoqueFromElement(Element elemRoque, CoupSpecial isSpecial)
    {
-      TypeRoque tr = getTypeRoqueFromString(elemRoque.getAttributeValue("type"));
-
-      return new Roque(isSpecial, tr);
+      try
+      {
+         TypeRoque tr = getTypeRoqueFromString(elemRoque.getAttributeValue("type"));
+         return new Roque(isSpecial, tr);
+      }
+      catch(Exception e)
+      {
+         System.out.println("Oops: " + e.getMessage());
+         return null;
+      }
    }
 }
