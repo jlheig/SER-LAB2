@@ -7,10 +7,7 @@
     <list default="true" id="63dc051d-3058-46cc-9b26-2484627b0d8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/ser/labo2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/ser/labo2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ch.heigvd.ser.labo2-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ch.heigvd.ser.labo2-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/heigvd/ser/labo2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/heigvd/ser/labo2/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +104,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -128,6 +136,16 @@
       <workItem from="1617121163209" duration="41000" />
       <workItem from="1617121234094" duration="646000" />
       <workItem from="1617215711598" duration="561000" />
+      <workItem from="1617221565600" duration="244000" />
+      <workItem from="1617272195991" duration="14000" />
+      <workItem from="1618149328166" duration="8000" />
+      <workItem from="1618151565985" duration="266000" />
+      <workItem from="1618155275241" duration="19000" />
+      <workItem from="1618156003222" duration="30000" />
+      <workItem from="1618157996512" duration="175000" />
+      <workItem from="1618158233394" duration="208000" />
+      <workItem from="1618164265188" duration="11000" />
+      <workItem from="1618923439099" duration="3470000" />
     </task>
     <servers />
   </component>
